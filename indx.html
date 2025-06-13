@@ -1,0 +1,1527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College of Computer Science - Course Materials</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .gradient-text {
+      background: linear-gradient(90deg, #ff7e00, #ffaa00);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .gradient-bg {
+      background: linear-gradient(90deg, #ff7e00, #ffaa00);
+    }
+    .course-card {
+      transition: all 0.3s ease;
+    }
+    .course-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(255, 126, 0, 0.2);
+    }
+    .resource-item {
+      transition: all 0.2s ease;
+    }
+    .resource-item:hover {
+      background-color: rgba(255, 126, 0, 0.1);
+    }
+    .dark-overlay {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+    .nav-link {
+      position: relative;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -2px;
+      left: 0;
+      background: linear-gradient(90deg, #ff7e00, #ffaa00);
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover::after {
+      width: 100%;
+    }
+  </style>
+  
+</head>
+<body class="bg-gray-900 text-gray-100 min-h-screen">
+  <!-- Header -->
+  <header class="bg-gray-800 shadow-lg sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="flex items-center space-x-2">
+        <i class="fas fa-laptop-code text-2xl gradient-text"></i>
+        <h1 class="text-2xl font-bold gradient-text">College of Computer Science</h1>
+      </div>
+      <nav class="hidden md:flex space-x-8">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#majors" class="nav-link">Majors</a>
+        <a href="#it-materials" class="nav-link">IT Materials</a>
+        <a href="#cs-materials" class="nav-link">CS Materials</a>
+        <a href="#ds-materials" class="nav-link">DS Materials</a>
+        <a href="#general" class="nav-link">General</a>
+      </nav>
+      <button class="md:hidden text-gray-300 hover:text-white">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+    </div>
+  </header>
+
+  
+  <!-- Hero Section -->
+  <section id="home" class="relative bg-gray-800 py-20">
+    <div class="dark-overlay absolute inset-0"></div>
+    <div class="container mx-auto px-4 relative z-10 text-center">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6 gradient-text">Course Materials & Explanations</h1>
+      <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-10">
+        Comprehensive resources for IT, CS, and DS courses with video explanations, slides, and reference materials.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="#it-materials" class="px-6 py-3 rounded-full gradient-bg text-white font-semibold hover:shadow-lg transition">
+          <i class="fas fa-network-wired mr-2"></i> IT Materials
+        </a>
+        <a href="#cs-materials" class="px-6 py-3 rounded-full gradient-bg text-white font-semibold hover:shadow-lg transition">
+          <i class="fas fa-code mr-2"></i> CS Materials
+        </a>
+        <a href="#ds-materials" class="px-6 py-3 rounded-full gradient-bg text-white font-semibold hover:shadow-lg transition">
+          <i class="fas fa-database mr-2"></i> DS Materials
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Majors Overview -->
+  <section id="majors" class="py-16 bg-gray-800">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-12 text-center gradient-text">Majors Overview</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- CS Card -->
+        <div class="bg-gray-700 rounded-xl p-6 course-card">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 rounded-full gradient-bg flex items-center justify-center mr-4">
+              <i class="fas fa-code text-white text-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold">Computer Science (CS)</h3>
+          </div>
+          <p class="text-gray-300 mb-4">
+            Focuses on programming, algorithms, and software development. Covers fundamental concepts of computation and information processing.
+          </p>
+          <ul class="space-y-2 text-gray-300">
+            <li class="flex items-center"><i class="fas fa-check-circle text-green-400 mr-2"></i> Software Engineering</li>
+            <li class="flex items-center"><i class="fas fa-check-circle text-green-400 mr-2"></i> Algorithms & Data Structures</li>
+            <li class="flex items-center"><i class="fas fa-check-circle text-green-400 mr-2"></i> Computer Architecture</li>
+          </ul>
+        </div>
+        
+        <!-- DS Card -->
+        <div class="bg-gray-700 rounded-xl p-6 course-card">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 rounded-full gradient-bg flex items-center justify-center mr-4">
+              <i class="fas fa-database text-white text-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold">Data Science (DS)</h3>
+          </div>
+          <p class="text-gray-300 mb-4">
+            Emphasis on data analysis, machine learning, and statistical modeling. Teaches how to extract insights from complex data.
+          </p>
+          <ul class="space-y-2 text-gray-300">
+            <li class="flex items-center"><i class="fas fa-check-circle text-green-400 mr-2"></i> Machine Learning</li>
+            <li class="flex items-center"><i class="fas fa-check-circle text-green-400 mr-2"></i> Data Visualization</li>
+            <li class="flex items-center"><i class="fas fa-check-circle text-green-400 mr-2"></i> Big Data Technologies</li>
+          </ul>
+        </div>
+        
+        <!-- IT Card -->
+        <div class="bg-gray-700 rounded-xl p-6 course-card">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 rounded-full gradient-bg flex items-center justify-center mr-4">
+              <i class="fas fa-network-wired text-white text-xl"></i>
+            </div>
+            <h3 class="text-xl font-bold">Information Technology (IT)</h3>
+          </div>
+          <p class="text-gray-300 mb-4">
+            Covers IT infrastructure, networks, and enterprise systems. Focuses on practical implementation of computing solutions.
+          </p>
+          <ul class="space-y-2 text-gray-300">
+            <li class="flex items-center"><i class="fas fa-check-circle text-green-400 mr-2"></i> Network Management</li>
+            <li class="flex items-center"><i class="fas fa-check-circle text-green-400 mr-2"></i> Web Technologies</li>
+            <li class="flex items-center"><i class="fas fa-check-circle text-green-400 mr-2"></i> System Administration</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IT Materials -->
+  <section id="it-materials" class="py-16 bg-gray-900">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-12 text-center gradient-text">IT Course Materials</h2>
+
+      <!-- Level 3 -->
+      <div class="mb-16">
+        <h3 class="text-2xl font-semibold mb-6 gradient-text border-b border-gray-700 pb-2">Level 3 Courses</h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- IT231 -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg course-card">
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h4 class="text-xl font-bold">IT231 - Introduction IT and IS</h4>
+              </div>
+              <div class="space-y-3">
+                <a href="https://drive.google.com/drive/folders/1uRuezMgYKX11zZ_DYHvcJk6uLMvgjdty" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fas fa-link text-red-500 mr-3"></i>
+                  <span>Drive Link</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PLCrQEWclqqR16WoUXlDm-vjmMgCp7iYV9&si=qUUt_cRx-sKnJLjV" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>YouTube Link</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- IT232 -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg course-card">
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h4 class="text-xl font-bold">IT232 - Object Oriented Programming</h4>
+              </div>
+              <div class="space-y-3">
+                <a href="https://youtube.com/playlist?list=PL1DUmTEdeA6K7rdxKiWJq6JIxTvHalY8f&si=jZH97Vg8-6aPCHfI" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Mohamed El Desouki</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PLCInYL3l2AajYlZGzU_LVrHdoouf8W6ZN&si=LFKgvW_G5KMto4Ai" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Adel Nasim</span>
+                </a>
+                <a href="https://t.me/computingg/754" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fas fa-chalkboard-teacher text-blue-400 mr-3"></i>
+                  <span>Blackboard</span>
+                </a>
+                <a href="https://t.me/computingg/1786" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fas fa-file-pdf text-red-400 mr-3"></i>
+                  <span>PDF File</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- IT233 -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg course-card">
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h4 class="text-xl font-bold">IT233 - Computer Organization</h4>
+              </div>
+              <div class="space-y-3">
+                <a href="https://drive.google.com/drive/folders/1HDSzFL1pZWdjEjKSIwsq9RDSQS4ninE6" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fas fa-link text-red-500 mr-3"></i>
+                  <span>Drive Link</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PLCrQEWclqqR1U2mmJ9Rwf_oRfYuSdEicG&si=GwofJUL3sFicOaZr" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>YouTube Link</span>
+                </a>
+                <a href="https://drive.google.com/drive/folders/1Ax_QnzIz_scw8XGffIXUoNXdLJVtj0Oz?usp=sharing" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fas fa-folder-open text-yellow-400 mr-3"></i>
+                  <span>Additional Drive Link</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Level 4 -->
+      <div class="mb-16">
+        <h3 class="text-2xl font-semibold mb-6 gradient-text border-b border-gray-700 pb-2">Level 4 Courses</h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- IT241 -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg course-card">
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h4 class="text-xl font-bold">IT241 - Operating Systems</h4>
+              </div>
+              <div class="space-y-3">
+                <a href="https://youtube.com/playlist?list=PLKlTaCM87WvrO0RElCsK30uS-ylzRLgFM&si=jr2mHQEAbLNTrNBf" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Dr. Hassan Alansary</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PLCrQEWclqqR0ME3itbAEYSc1DD7ZhMiW9&si=a-QG7SRqFGFaRFhi" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>YouTube Link</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PLHKTPL-jkzUqgHIBdC2I16QqZCSDN_6oS&si=wDy-r2OtZ__m5BLh" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Mustafa S.Aljumaly</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PLxIvc-MGOs6ib0oK1z9C46DeKd9rRcSMY&si=T8TuaYCIW5aW3lwl" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Dr. Ahmed Hagag (Mid Content Only)</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- IT244 -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg course-card">
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h4 class="text-xl font-bold">IT244 - Introduction to Database</h4>
+              </div>
+              <div class="space-y-3">
+                <a href="https://youtube.com/playlist?list=PL37D52B7714788190&si=VcLGjwBdPqh9vK_8" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Mohamed El Desouki</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PL1DUmTEdeA6IvvAfktWt3WQC_nTrcx6ey&si=PVlJF1lhzfPq7G3Q" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Mohamed El Desouki (Advanced)</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PLiRL7CfiWlYG7rPyYpynLWU_0qcAqOPJS&si=dgJTIKEdJzy1oFrK" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Hicham Elmongui</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PLvkw_XkuAv4vN2ZIZmUeRSNWtzEYiKTWf&si=tdhBHzNceTfAkfsy" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>ULLE Records</span>
+                </a>
+                <a href="https://t.me/computingg/1757" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fas fa-file-pdf text-red-400 mr-3"></i>
+                  <span>Drive Link</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PLucw93gpJmCgypXf3z8gSzhqH4sFhlm0a&feature=shared" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>SEU شروحات</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Level 4 -->
+      <div class="mb-16">
+        <h3 class="text-2xl font-semibold mb-6 gradient-text border-b border-gray-700 pb-2">Level 4 Courses</h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- IT245 -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg course-card">
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h4 class="text-xl font-bold">IT245 - Data Structure</h4>
+              </div>
+              <div class="space-y-3">
+                <a href="https://youtube.com/playlist?list=PLCInYL3l2AajqOUW_2SwjWeMwf4vL4RSp&si=jHvLzj1bHqJIJI0-" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Adel Nasim</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PLwCMLs3sjOY4UQq4vXgGPwGLVX1Y5faaS&si=05LDXD-kKX_CR2mT" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Hard-Code</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O&si=N7zZpkOm-ypBuX14" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Abdul Bari</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PL1DUmTEdeA6K2yGIRxMvK9nTfRIiWXAWV&si=d2eDWMp3jKqYAUVD" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Mohamed El Desouki</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PLucw93gpJmCj8mmBziGGbICMd6NtjMWvS&feature=shared" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>SEU شروحات</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- IT351 -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg course-card">
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h4 class="text-xl font-bold">IT351 - Computer Networks</h4>
+              </div>
+              <div class="space-y-3">
+                <a href="https://youtube.com/playlist?list=PLN6rtDw1g64koqqpL2rD1iWTQCen4BFFN&si=ExqRNHMzJ-bwAzhk" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Mohammed Alghanmi</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PLdUHNiwJgn85w-kMChdZJbK6fqFS4tF-1&si=u_EDzY00K1Xjaygz" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Etihad IT HU</span>
+                </a>
+                <a href="https://youtube.com/@networkchuck?si=kkoE1iXwC7WN23bi" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>NetworkChuck</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ&si=4rv5l_BUduJgFxYx" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Jeremy's IT Lab</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- IT354 -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg course-card">
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h4 class="text-xl font-bold">IT354 - Database Management System</h4>
+              </div>
+              <div class="space-y-3">
+                <a href="https://t.me/computingg/1820" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fas fa-link text-blue-400 mr-3"></i>
+                  <span>Link</span>
+                </a>
+                <a href="https://drive.google.com/drive/u/2/folders/1XzOKRUdyPA3vmzLgrSFHEM0qjjRA0xeP" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fas fa-folder-open text-yellow-400 mr-3"></i>
+                  <span>Drive Link</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Level 6 -->
+      <div class="mb-16">
+        <h3 class="text-2xl font-semibold mb-6 gradient-text border-b border-gray-700 pb-2">Level 6 Courses</h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- IT361 -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg course-card">
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h4 class="text-xl font-bold">IT361 - Web Technologies</h4>
+              </div>
+              <div class="space-y-3">
+                <a href="https://www.youtube.com/watch?v=E_dFmgd7nH0&list=PLN6rtDw1g64nAVVBdAsU9PNgEk4Zpvtrd&pp=iAQB" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Mohammed Alghanmi</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PLdUHNiwJgn86h5v-yeBWtFjjK6-ue5nEw&si=t3eyTagvZCmh6j8d" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Etihad IT HU - Lecture</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PLdUHNiwJgn84cCmXTnHp8YY3omvoFBoSP&si=YhE_Abwo10Oc2YPg" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Etihad IT HU - Lab</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- IT362 -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg course-card">
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h4 class="text-xl font-bold">IT362 - Project Management</h4>
+              </div>
+              <div class="space-y-3">
+                <a href="https://youtube.com/playlist?list=PLLHG16Mhq91ZoDysym0xjxEXJ5VoDtIPq&si=TPz5LB9t93l6rirF" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>YouTube Playlist</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PLucw93gpJmCgeaQIhyr82_XjtLWXbgaLq&feature=shared" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>SEU شروحات</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- IT363 -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg course-card">
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h4 class="text-xl font-bold">IT363 - Network Management</h4>
+              </div>
+              <div class="space-y-3">
+                <a href="https://mega.nz/folder/YZRW3AAa#nr3yZdWDbtMn6PsQyV2RJA" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Link</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- IT365 -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg course-card">
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h4 class="text-xl font-bold">IT365 - Enterprise Systems</h4>
+              </div>
+              <div class="space-y-3">
+                <a href="https://t.me/+rRc8RDyJwgM0NjNk" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fas fa-link text-blue-400 mr-3"></i>
+                  <span>Group Link</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Level 7 -->
+      <div class="mb-16">
+        <h3 class="text-2xl font-semibold mb-6 gradient-text border-b border-gray-700 pb-2">Level 7 Courses</h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- IT475 -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg course-card">
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h4 class="text-xl font-bold">IT475 - Decision Support Systems</h4>
+              </div>
+              <div class="space-y-3">
+                <a href="https://t.me/+YyMgQZTUDIllMjk0" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fas fa-link text-blue-400 mr-3"></i>
+                  <span>Link</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Level 8 -->
+      <div class="mb-16">
+        <h3 class="text-2xl font-semibold mb-6 gradient-text border-b border-gray-700 pb-2">Level 8 Courses</h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg course-card">
+            <div class="p-6">
+              <h4 class="text-xl font-bold">SOON</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CS Materials -->
+  <section id="cs-materials" class="py-16 bg-gray-900">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-12 text-center gradient-text">CS Course Materials</h2>
+
+      <!-- Level 3 -->
+      <div class="mb-16">
+        <h3 class="text-2xl font-semibold mb-6 gradient-text border-b border-gray-700 pb-2">Level 3 Courses</h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- CS230 -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg course-card">
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h4 class="text-xl font-bold">CS230 - Object Oriented Programming</h4>
+              </div>
+              <div class="space-y-3">
+                <a href="https://youtube.com/playlist?list=PL1DUmTEdeA6K7rdxKiWJq6JIxTvHalY8f&si=R9BB5NV0g-qPK8TF" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Mohamed El Desouki</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PLCInYL3l2AajYlZGzU_LVrHdoouf8W6ZN&si=xnHKipVmR6FpLho6" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Adel Nasim</span>
+                </a>
+                <a href="https://t.me/computingg/754" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fas fa-chalkboard-teacher text-blue-400 mr-3"></i>
+                  <span>Blackboard</span>
+                </a>
+                <a href="https://t.me/computingg/1786" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fas fa-file-pdf text-red-400 mr-3"></i>
+                  <span>PDF File</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- CS231 -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg course-card">
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h4 class="text-xl font-bold">CS231 - Digital Logic Design</h4>
+              </div>
+              <div class="space-y-3">
+                <a href="https://youtube.com/playlist?list=PL21KuaIMCPGoiDogGSxbBtnkmBMM_-6o3&si=IgvXkvQnkcYJBaxn" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Zahi Haddad</span>
+                </a>
+                <a href="https://t.me/computingg/1801" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fas fa-chalkboard-teacher text-blue-400 mr-3"></i>
+                  <span>Blackboard</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PLBlnK6fEyqRjMH3mWf6kwqiTbT798eAOm&si=M78Yq1TUaR1XqANe" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Neso Academy</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Level 4 -->
+      <div class="mb-16">
+        <h3 class="text-2xl font-semibold mb-6 gradient-text border-b border-gray-700 pb-2">Level 4 Courses</h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- CS240 -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg course-card">
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h4 class="text-xl font-bold">CS240 - Data Structure</h4>
+              </div>
+              <div class="space-y-3">
+                <a href="https://youtube.com/playlist?list=PLwCMLs3sjOY4UQq4vXgGPwGLVX1Y5faaS&si=05LDXD-kKX_CR2mT" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Hard-Core</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PLCInYL3l2AajqOUW_2SwjWeMwf4vL4RSp&si=jHvLzj1bHqJIJI0-" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Adel Nasim</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O&si=N7zZpkOm-ypBuX14" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Abdul Bari</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PL1DUmTEdeA6K2yGIRxMvK9nTfRIiWXAWV&si=d2eDWMp3jKqYAUVD" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Mohamed El Desouki</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PLucw93gpJmCj8mmBziGGbICMd6NtjMWvS&feature=shared" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>SEU شروحات</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- CS241 -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg course-card">
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h4 class="text-xl font-bold">CS241 - Computer Architecture and Organization</h4>
+              </div>
+              <div class="space-y-3">
+                <a href="https://youtube.com/playlist?list=PLMm8EjqH1EFVEVWSiBdCoBEJHffjHUScZ&si=0YW1ZtN9Kul3W_8O" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Ahmed Sallam</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PLBlnK6fEyqRgLLlzdgiTUKULKJPYc0A4q&si=lCG21wMrfNYSHDb7" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Neso Academy</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PLIhKsUwB2-eys3SjNOv6AiafB4iik3bUo&si=-2Pw48zhre7sMIqP" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Youtube Link</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Level 3 -->
+      <div class="mb-16">
+        <h3 class="text-2xl font-semibold mb-6 gradient-text border-b border-gray-700 pb-2">Level 3 Courses</h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- CS242 -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg course-card">
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h4 class="text-xl font-bold">CS242 - Theory of Computing</h4>
+              </div>
+              <div class="space-y-3">
+                <a href="https://youtube.com/playlist?list=PLBlnK6fEyqRgp46KUv4ZY69yXmpwKOIev&si=sIaqbdgLvv08bS7I" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Neso Academy</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PLrCBCI_Do84iJ-kiE1F2trKik2Ts4XelM&feature=shared" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Anas Shahwan Tech</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PL65C28owiEM1DbwhSt8h1EuIe3Q6lEbf5&feature=shared" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Part 1</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PL65C28owiEM37EuP3ieQtvFg6jBqoiQEQ&feature=shared" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Part 2</span>
+                </a>
+                <a href="https://www.geeksforgeeks.org/introduction-of-theory-of-computation/" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fas fa-link text-blue-400 mr-3"></i>
+                  <span>Geeks for Geeks Website</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PLZcCtN0GBoYYmIabXVoJWcXlqHHMRoN3E&feature=shared" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>AbuFatimah AlAli</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- CS243 -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg course-card">
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h4 class="text-xl font-bold">CS243 - Discrete Math for CS</h4>
+              </div>
+              <div class="space-y-3">
+                <a href="https://www.youtube.com/playlist?list=PLp2eAGIFKMEWb3PjNdXskeTm7q0f8nEJ8" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Youtube Link</span>
+                </a>
+                <a href="https://youtube.com/@discretemathvideos204?si=rCjUWlXkxm7diKUA" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Youtube Link (Check the playlists)</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Level 4 -->
+      <div class="mb-16">
+        <h3 class="text-2xl font-semibold mb-6 gradient-text border-b border-gray-700 pb-2">Level 4 Courses</h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- CS350 -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg course-card">
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h4 class="text-xl font-bold">CS350 - Introduction to Database</h4>
+              </div>
+              <div class="space-y-3">
+                <a href="https://youtube.com/playlist?list=PL37D52B7714788190&si=VcLGjwBdPqh9vK_8" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Mohamed El Desouki</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PL1DUmTEdeA6IvvAfktWt3WQC_nTrcx6ey&si=PVlJF1lhzfPq7G3Q" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Mohamed El Desouki (Advanced)</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PLiRL7CfiWlYG7rPyYpynLWU_0qcAqOPJS&si=dgJTIKEdJzy1oFrK" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Hicham Elmongui</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PLvkw_XkuAv4vN2ZIZmUeRSNWtzEYiKTWf&si=tdhBHzNceTfAkfsy" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>ULLE Records</span>
+                </a>
+                <a href="https://t.me/computingg/1757" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fas fa-file-pdf text-red-400 mr-3"></i>
+                  <span>Drive Link</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PLucw93gpJmCgypXf3z8gSzhqH4sFhlm0a&feature=shared" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>SEU شروحات</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- CS351 -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg course-card">
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h4 class="text-xl font-bold">CS351 - Operating Systems</h4>
+              </div>
+              <div class="space-y-3">
+                <a href="https://youtube.com/playlist?list=PLKlTaCM87WvrO0RElCsK30uS-ylzRLgFM&si=jr2mHQEAbLNTrNBf" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Dr. Hassan Alansary</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PLCrQEWclqqR0ME3itbAEYSc1DD7ZhMiW9&si=a-QG7SRqFGFaRFhi" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>YouTube Link</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PLHKTPL-jkzUqgHIBdC2I16QqZCSDN_6oS&si=wDy-r2OtZ__m5BLh" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Mustafa S.Aljumaly</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PLxIvc-MGOs6ib0oK1z9C46DeKd9rRcSMY&si=T8TuaYCIW5aW3lwl" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Dr. Ahmed Hagag (Mid Content Only)</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- CS353 -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg course-card">
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h4 class="text-xl font-bold">CS353 - Design and Analysis of Algorithms</h4>
+              </div>
+              <div class="space-y-3">
+                <a href="https://www.youtube.com/watch?v=kqUhl6BuD5c&list=PLN6rtDw1g64maZpDgDLBfcuZSCxVJCAdW&pp=iAQB" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Mohammed Alghanmi</span>
+                </a>
+                <a href="https://t.me/computingg/628" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fas fa-link text-blue-400 mr-3"></i>
+                  <span>Channel Link</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PL9fwy3NUQKwa6f1e0rrpmQUpME6Sm7ODv&feature=shared" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>YouTube Link</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Level 6 -->
+      <div class="mb-16">
+        <h3 class="text-2xl font-semibold mb-6 gradient-text border-b border-gray-700 pb-2">Level 6 Courses</h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- CS360 -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg course-card">
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h4 class="text-xl font-bold">CS360 - Computer Networks</h4>
+              </div>
+              <div class="space-y-3">
+                <a href="https://youtube.com/playlist?list=PLN6rtDw1g64koqqpL2rD1iWTQCen4BFFN&si=ExqRNHMzJ-bwAzhk" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Mohammed Alghanmi</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PLdUHNiwJgn85w-kMChdZJbK6fqFS4tF-1&si=u_EDzY00K1Xjaygz" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Etihad IT HU</span>
+                </a>
+                <a href="https://youtube.com/@networkchuck?si=kkoE1iXwC7WN23bi" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>NetworkChuck</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ&si=4rv5l_BUduJgFxYx" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Jeremy's IT Lab</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- CS361 -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg course-card">
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h4 class="text-xl font-bold">CS361 - Web Programming</h4>
+              </div>
+              <div class="space-y-3">
+                <a href="https://www.youtube.com/watch?v=E_dFmgd7nH0&list=PLN6rtDw1g64nAVVBdAsU9PNgEk4Zpvtrd&pp=iAQB" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Mohammed Alghanmi</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PLdUHNiwJgn86h5v-yeBWtFjjK6-ue5nEw&si=t3eyTagvZCmh6j8d" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Etihad IT HU - Lecture</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PLdUHNiwJgn84cCmXTnHp8YY3omvoFBoSP&si=YhE_Abwo10Oc2YPg" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Etihad IT HU - Lab</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- CS362 -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg course-card">
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h4 class="text-xl font-bold">CS362 - AI</h4>
+              </div>
+              <div class="space-y-3">
+                <a href="https://youtube.com/playlist?list=PLFINw1G-wi0nSBXG9rWmQLKJi7VTsTKSF&si=aSRPjRHOz1-wHm0g" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>YouTube Playlist</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- CS363 -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg course-card">
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h4 class="text-xl font-bold">CS363 - Principles of Programming Languages</h4>
+              </div>
+              <div class="space-y-3">
+                <a href="https://youtube.com/playlist?list=PLnGJt0oPFzgynecY-TtS0HmW7HgBD0CFw&si=csv5eSai2RZPWzov" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>YouTube Link (Mid Content Only)</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Level 7 -->
+      <div class="mb-16">
+        <h3 class="text-2xl font-semibold mb-6 gradient-text border-b border-gray-700 pb-2">Level 7 Courses</h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg course-card">
+            <div class="p-6">
+              <h4 class="text-xl font-bold">SOON</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Level 8 -->
+      <div class="mb-16">
+        <h3 class="text-2xl font-semibold mb-6 gradient-text border-b border-gray-700 pb-2">Level 8 Courses</h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg course-card">
+            <div class="p-6">
+              <h4 class="text-xl font-bold">CS480 - Project Management</h4>
+            </div>
+            <div class="space-y-3">
+              <a href="https://youtube.com/playlist?list=PLLHG16Mhq91ZoDysym0xjxEXJ5VoDtIPq&si=TPz5LB9t93l6rirF" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                <i class="fab fa-youtube text-red-500 mr-3"></i>
+                <span>YouTube Link</span>
+              </a>
+              <a href="https://youtube.com/playlist?list=PLucw93gpJmCgeaQIhyr82_XjtLWXbgaLq&feature=shared" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                <i class="fab fa-youtube text-red-500 mr-3"></i>
+                <span>SEU شروحات</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DS Materials -->
+  <section id="ds-materials" class="py-16 bg-gray-900">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-12 text-center gradient-text">DS Course Materials</h2>
+
+      <!-- Level 3 -->
+      <div class="mb-16">
+        <h3 class="text-2xl font-semibold mb-6 gradient-text border-b border-gray-700 pb-2">Level 3 Courses</h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- DS230 -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg course-card">
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h4 class="text-xl font-bold">DS230 - Object Oriented Programming</h4>
+              </div>
+              <div class="space-y-3">
+                <a href="https://youtube.com/playlist?list=PL1DUmTEdeA6K7rdxKiWJq6JIxTvHalY8f&si=R9BB5NV0g-qPK8TF" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Mohamed El Desouki</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PLCInYL3l2AajYlZGzU_LVrHdoouf8W6ZN&si=xnHKipVmR6FpLho6" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Adel Nasim</span>
+                </a>
+                <a href="https://t.me/computingg/754" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fas fa-chalkboard-teacher text-blue-400 mr-3"></i>
+                  <span>Blackboard</span>
+                </a>
+                <a href="https://t.me/computingg/1786" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fas fa-file-pdf text-red-400 mr-3"></i>
+                  <span>PDF File</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- DS231 -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg course-card">
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h4 class="text-xl font-bold">DS231 - Introduction to Data Science Programming</h4>
+              </div>
+              <div class="space-y-3">
+                <a href="https://youtube.com/playlist?list=PLN6rtDw1g64lRIl-Mg6OGrWoB6HKzpoAR&feature=shared" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Mohammed Alghanmi</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Level 4 -->
+      <div class="mb-16">
+        <h3 class="text-2xl font-semibold mb-6 gradient-text border-b border-gray-700 pb-2">Level 4 Courses</h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- DS240 -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg course-card">
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h4 class="text-xl font-bold">DS240 - Data Structure</h4>
+              </div>
+              <div class="space-y-3">
+                <a href="https://youtube.com/playlist?list=PLwCMLs3sjOY4UQq4vXgGPwGLVX1Y5faaS&si=05LDXD-kKX_CR2mT" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Hard-Core</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PLCInYL3l2AajqOUW_2SwjWeMwf4vL4RSp&si=jHvLzj1bHqJIJI0-" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Adel Nasim</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O&si=N7zZpkOm-ypBuX14" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Abdul Bari</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PL1DUmTEdeA6K2yGIRxMvK9nTfRIiWXAWV&si=d2eDWMp3jKqYAUVD" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Mohamed El Desouki</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PLucw93gpJmCj8mmBziGGbICMd6NtjMWvS&feature=shared" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>SEU شروحات</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- DS243 -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg course-card">
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h4 class="text-xl font-bold">DS243 - Computer Architecture and Organization</h4>
+              </div>
+              <div class="space-y-3">
+                <a href="https://youtube.com/playlist?list=PLMm8EjqH1EFVEVWSiBdCoBEJHffjHUScZ&si=0YW1ZtN9Kul3W_8O" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Ahmed Sallam</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PLBlnK6fEyqRgLLlzdgiTUKULKJPYc0A4q&si=lCG21wMrfNYSHDb7" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Neso Academy</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PLIhKsUwB2-eys3SjNOv6AiafB4iik3bUo&si=-2Pw48zhre7sMIqP" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Youtube Link</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Level 5 -->
+      <div class="mb-16">
+        <h3 class="text-2xl font-semibold mb-6 gradient-text border-b border-gray-700 pb-2">Level 5 Courses</h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- DS350 -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg course-card">
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h4 class="text-xl font-bold">DS350 - Introduction to Database</h4>
+              </div>
+              <div class="space-y-3">
+                <a href="https://youtube.com/playlist?list=PL37D52B7714788190&si=VcLGjwBdPqh9vK_8" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Mohamed El Desouki</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PL1DUmTEdeA6IvvAfktWt3WQC_nTrcx6ey&si=PVlJF1lhzfPq7G3Q" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Mohamed El Desouki (Advanced)</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PLiRL7CfiWlYG7rPyYpynLWU_0qcAqOPJS&si=dgJTIKEdJzy1oFrK" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Hicham Elmongui</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PLvkw_XkuAv4vN2ZIZmUeRSNWtzEYiKTWf&si=tdhBHzNceTfAkfsy" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>ULLE Records</span>
+                </a>
+                <a href="https://t.me/computingg/1757" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fas fa-file-pdf text-red-400 mr-3"></i>
+                  <span>Drive Link</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PLucw93gpJmCgypXf3z8gSzhqH4sFhlm0a&feature=shared" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>SEU شروحات</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- DS351 -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg course-card">
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h4 class="text-xl font-bold">DS351 - Operating Systems</h4>
+              </div>
+              <div class="space-y-3">
+                <a href="https://youtube.com/playlist?list=PLKlTaCM87WvrO0RElCsK30uS-ylzRLgFM&si=jr2mHQEAbLNTrNBf" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Dr. Hassan Alansary</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PLCrQEWclqqR0ME3itbAEYSc1DD7ZhMiW9&si=a-QG7SRqFGFaRFhi" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>YouTube Link</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PLHKTPL-jkzUqgHIBdC2I16QqZCSDN_6oS&si=wDy-r2OtZ__m5BLh" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Mustafa S.Aljumaly</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PLxIvc-MGOs6ib0oK1z9C46DeKd9rRcSMY&si=T8TuaYCIW5aW3lwl" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Dr. Ahmed Hagag (Mid Content Only)</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- DS352 -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg course-card">
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h4 class="text-xl font-bold">DS352 - Design and Analysis of Algorithms</h4>
+              </div>
+              <div class="space-y-3">
+                <a href="https://www.youtube.com/watch?v=kqUhl6BuD5c&list=PLN6rtDw1g64maZpDgDLBfcuZSCxVJCAdW&pp=iAQB" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Mohammed Alghanmi</span>
+                </a>
+                <a href="https://t.me/computingg/628" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fas fa-link text-blue-400 mr-3"></i>
+                  <span>Channel Link</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PL9fwy3NUQKwa6f1e0rrpmQUpME6Sm7ODv&feature=shared" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>YouTube Link</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- DS353 -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg course-card">
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h4 class="text-xl font-bold">DS353 - Project Management</h4>
+              </div>
+              <div class="space-y-3">
+                <a href="https://youtube.com/playlist?list=PLLHG16Mhq91ZoDysym0xjxEXJ5VoDtIPq&si=TPz5LB9t93l6rirF" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Link</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PLucw93gpJmCgeaQIhyr82_XjtLWXbgaLq&feature=shared" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>SEU شروحات</span>
+                </a>
+              </div>
+            </div>
+          </div>  
+          
+        </div>
+      </div>
+
+      <!-- Level 6 -->
+      <div class="mb-16">
+        <h3 class="text-2xl font-semibold mb-6 gradient-text border-b border-gray-700 pb-2">Level 6 Courses</h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- DS360 -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg course-card">
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h4 class="text-xl font-bold">DS360 - Computer Networks</h4>
+              </div>
+              <div class="space-y-3">
+                <a href="https://youtube.com/playlist?list=PLN6rtDw1g64koqqpL2rD1iWTQCen4BFFN&si=ExqRNHMzJ-bwAzhk" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Mohammed Alghanmi</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PLdUHNiwJgn85w-kMChdZJbK6fqFS4tF-1&si=u_EDzY00K1Xjaygz" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Etihad IT HU</span>
+                </a>
+                <a href="https://youtube.com/@networkchuck?si=kkoE1iXwC7WN23bi" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>NetworkChuck</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PLxbwE86jKRgMpuZuLBivzlM8s2Dk5lXBQ&si=4rv5l_BUduJgFxYx" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Jeremy's IT Lab</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- DS362 -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg course-card">
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h4 class="text-xl font-bold">DS362 - Web Programming</h4>
+              </div>
+              <div class="space-y-3">
+                <a href="https://www.youtube.com/watch?v=E_dFmgd7nH0&list=PLN6rtDw1g64nAVVBdAsU9PNgEk4Zpvtrd&pp=iAQB" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Mohammed Alghanmi</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PLdUHNiwJgn86h5v-yeBWtFjjK6-ue5nEw&si=t3eyTagvZCmh6j8d" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Etihad IT HU - Lecture</span>
+                </a>
+                <a href="https://youtube.com/playlist?list=PLdUHNiwJgn84cCmXTnHp8YY3omvoFBoSP&si=YhE_Abwo10Oc2YPg" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Etihad IT HU - Lab</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- DS363 -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg course-card">
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h4 class="text-xl font-bold">DS363 - AI</h4>
+              </div>
+              <div class="space-y-3">
+                <a href="https://youtube.com/playlist?list=PLFINw1G-wi0nSBXG9rWmQLKJi7VTsTKSF&si=aSRPjRHOz1-wHm0g" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>YouTube Playlist</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- DS364 -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg course-card">
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h4 class="text-xl font-bold">DS364 - Data Curation (Management and Organization)</h4>
+              </div>
+              <div class="space-y-3">
+                <a href="https://www.youtube.com/watch?v=Uad9p9pu6Bc&list=PLN6rtDw1g64n1ISQpjhGcZe0hikxFuk8j&pp=iAQB" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-youtube text-red-500 mr-3"></i>
+                  <span>Mohammed Alghanmi</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Level 7 -->
+      <div class="mb-16">
+        <h3 class="text-2xl font-semibold mb-6 gradient-text border-b border-gray-700 pb-2">Level 7 Courses</h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- DS474 -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg course-card">
+            <div class="p-6">
+              <h4 class="text-xl font-bold">DS474 - Decision Support Systems (AI Track)</h4>
+              <div class="space-y-3">
+                <a href="https://t.me/+YyMgQZTUDIllMjk0" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fas fa-link text-blue-400 mr-3"></i>
+                  <span>Link</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Level 8 -->
+      <div class="mb-16">
+        <h3 class="text-2xl font-semibold mb-6 gradient-text border-b border-gray-700 pb-2">Level 8 Courses</h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg course-card">
+            <div class="p-6">
+              <h4 class="text-xl font-bold">SOON</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Previous head content remains the same -->
+</head>
+<body class="bg-gray-900 text-gray-100 min-h-screen">
+  <!-- Header remains the same -->
+
+  <!-- Add this new General section after the DS Materials section -->
+  <section id="general" class="py-16 bg-gray-900">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-12 text-center gradient-text">General Resources</h2>
+
+      <div class="mb-16">
+        <h3 class="text-2xl font-semibold mb-6 gradient-text border-b border-gray-700 pb-2">Quick Links</h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Blackboard -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg course-card">
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h4 class="text-xl font-bold">Blackboard</h4>
+              </div>
+              <div class="space-y-3">
+                <a href="https://seu.blackboard.com/" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fas fa-chalkboard text-blue-400 mr-3"></i>
+                  <span>Blackboard Login</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- University Website -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg course-card">
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h4 class="text-xl font-bold">University Website</h4>
+              </div>
+              <div class="space-y-3">
+                <a href="https://seu.edu.sa/" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fas fa-university text-yellow-400 mr-3"></i>
+                  <span>SEU Official Website</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Student Portal -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg course-card">
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h4 class="text-xl font-bold">Student Portal</h4>
+              </div>
+              <div class="space-y-3">
+                <a href="https://my.seu.edu.sa/" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fas fa-user-graduate text-green-400 mr-3"></i>
+                  <span>MySEU Portal</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg course-card">
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h4 class="text-xl font-bold">University Email</h4>
+              </div>
+              <div class="space-y-3">
+                <a href="https://mail.google.com/a/seu.edu.sa" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fas fa-envelope text-red-400 mr-3"></i>
+                  <span>SEU Email</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Study Materials -->
+      <div class="mb-16">
+        <h3 class="text-2xl font-semibold mb-6 gradient-text border-b border-gray-700 pb-2">Study Materials</h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Quizzes, Slides, and Books -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg course-card">
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h4 class="text-xl font-bold">Course Resources</h4>
+              </div>
+              <div class="space-y-3">
+                <a href="https://drive.google.com/drive/u/2/folders/171QmzC3gsixrvVAUKqi2AWA0RAYLgxZC" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fas fa-folder-open text-yellow-400 mr-3"></i>
+                  <span>Quizzes, Slides & Books</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Previous Exams -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg course-card">
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h4 class="text-xl font-bold">Previous Exams</h4>
+              </div>
+              <div class="space-y-3">
+                <a href="https://drive.google.com/drive/folders/1YOUR_FOLDER_ID_HERE" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fas fa-file-alt text-purple-400 mr-3"></i>
+                  <span>Past Exams Collection</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Useful Websites -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg course-card">
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h4 class="text-xl font-bold">Learning Resources</h4>
+              </div>
+              <div class="space-y-3">
+                <a href="https://www.geeksforgeeks.org/" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fas fa-laptop-code text-green-400 mr-3"></i>
+                  <span>GeeksforGeeks</span>
+                </a>
+                <a href="https://stackoverflow.com/" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fab fa-stack-overflow text-orange-400 mr-3"></i>
+                  <span>Stack Overflow</span>
+                </a>
+                <a href="https://www.w3schools.com/" target="_blank" class="resource-item flex items-center p-2 rounded hover:bg-gray-700">
+                  <i class="fas fa-code text-blue-400 mr-3"></i>
+                  <span>W3Schools</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Important Contacts -->
+      <div class="mb-16">
+        <h3 class="text-2xl font-semibold mb-6 gradient-text border-b border-gray-700 pb-2">Important Contacts</h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- College Administration -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg course-card">
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h4 class="text-xl font-bold">College Administration</h4>
+              </div>
+              <div class="space-y-3">
+                <div class="resource-item flex items-center p-2 rounded">
+                  <i class="fas fa-phone-alt text-blue-400 mr-3"></i>
+                  <span>+966 11 123 4567</span>
+                </div>
+                <div class="resource-item flex items-center p-2 rounded">
+                  <i class="fas fa-envelope text-blue-400 mr-3"></i>
+                  <span>cs@seu.edu.sa</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Student Support -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg course-card">
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h4 class="text-xl font-bold">Student Support</h4>
+              </div>
+              <div class="space-y-3">
+                <div class="resource-item flex items-center p-2 rounded">
+                  <i class="fas fa-phone-alt text-green-400 mr-3"></i>
+                  <span>+966 11 123 4568</span>
+                </div>
+                <div class="resource-item flex items-center p-2 rounded">
+                  <i class="fas fa-envelope text-green-400 mr-3"></i>
+                  <span>support@seu.edu.sa</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- IT Helpdesk -->
+          <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg course-card">
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-4">
+                <h4 class="text-xl font-bold">IT Helpdesk</h4>
+              </div>
+              <div class="space-y-3">
+                <div class="resource-item flex items-center p-2 rounded">
+                  <i class="fas fa-phone-alt text-red-400 mr-3"></i>
+                  <span>+966 11 123 4569</span>
+                </div>
+                <div class="resource-item flex items-center p-2 rounded">
+                  <i class="fas fa-envelope text-red-400 mr-3"></i>
+                  <span>ithelp@seu.edu.sa</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rest of your existing content remains the same -->
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>البحث عن المواد - subject Search</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h1>البحث عن المواد</h1>
+                </div>
+                <p class="subtitle">ابحث عن المواد الدراسية بسهولة</p>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="search-section">
+                <div class="search-container">
+                    <div class="search-input-wrapper">
+                        <i class="fas fa-search search-icon"></i>
+                        <input 
+                            type="text" 
+                            id="searchInput" 
+                            placeholder="ابحث عن اسم المادة أو الكود (مثل: DS230, CS240, IT351)"
+                            class="search-input"
+                        >
+                        <button id="clearBtn" class="clear-btn" style="display: none;">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="results-section">
+                <div id="searchResults" class="search-results"></div>
+                <div id="noResults" class="no-results" style="display: none;">
+                    <i class="fas fa-search"></i>
+                    <h3>لا توجد نتائج</h3>
+                    <p>لم يتم العثور على أي مواد تطابق بحثك</p>
+                </div>
+                <div id="initialMessage" class="initial-message">
+                    <i class="fas fa-book-open"></i>
+                    <h3>ابدأ البحث</h3>
+                    <p>اكتب اسم المادة أو الكود للبحث عن الدورات المتاحة</p>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 نظام البحث عن المواد. جميع الحقوق محفوظة.</p>
+            <p>الموقع من تطوير إدارة القروب: <a href="https://t.me/Majeedseu" target="_blank">@Majeedseu</a></p>
+            <p>الموقع مازال بنسخته الاولى V2.1.0 </p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
